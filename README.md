@@ -1,117 +1,178 @@
-# 10AM_TBROWSER_CLASSIC_HISTORY_FORWARD
+Arielo MiniPC OS
+ESP32-S3 Waveshare 7" Mini Computer
+Autor: Ariel (EA7JTP)
+________________________________________
+Introducción
+Arielo MiniPC OS es un sistema operativo ligero para la placa Waveshare ESP32-S3 Touch LCD 7", concebido para demostrar hasta dónde puede llegar un ESP32-S3 cuando se diseña una arquitectura modular, eficiente y respetuosa con los recursos del hardware.
+El objetivo nunca fue construir una simple demostración gráfica, sino un pequeño ordenador funcional con aplicaciones independientes, almacenamiento externo, USB Host, red, navegador web y una interfaz gráfica propia.
+Todo ello ejecutándose íntegramente sobre un ESP32-S3.
+________________________________________
+Filosofía del proyecto
+Durante el desarrollo se tomó una decisión que marcó completamente la arquitectura del sistema:
+El sistema operativo debía permanecer pequeño, robusto y estable.
+Las nuevas funcionalidades no debían integrarse dentro del firmware principal, sino ejecutarse como aplicaciones ELF independientes cargadas desde:
+•	memoria interna (/root/bin) 
+•	tarjeta microSD 
+•	memoria USB 
+Gracias a esta filosofía:
+•	cada aplicación evoluciona independientemente; 
+•	el firmware principal apenas necesita modificaciones; 
+•	los riesgos de introducir regresiones son mínimos; 
+•	el sistema permanece ligero y fácilmente ampliable. 
+________________________________________
+Hardware
+Plataforma principal
+•	Waveshare ESP32-S3 Touch LCD 7" 
+•	ESP32-S3 Dual Core 240 MHz 
+•	16 MB Flash 
+•	8 MB PSRAM 
+•	Pantalla 800x480 RGB 
+•	Touch GT911 
+________________________________________
+Almacenamiento
+•	LittleFS interno 
+•	microSD 
+•	USB Mass Storage Hot-Plug 
+________________________________________
+USB Host
+Soporte completo para:
+•	HUB USB 
+•	teclado USB HID 
+•	ratón USB HID 
+•	memorias USB 
+con conexión y desconexión en caliente.
+________________________________________
+Características principales
+Escritorio gráfico
+•	interfaz propia 
+•	iconos 
+•	ventanas 
+•	cursor USB 
+•	soporte táctil 
+________________________________________
+Gestor de archivos
+•	navegación por: 
+•	LittleFS 
+•	microSD 
+•	USB 
+Funciones:
+•	copiar 
+•	mover 
+•	borrar 
+•	crear carpetas 
+•	comprimir TAR.GZ 
+•	descomprimir 
+•	progreso de copia 
+________________________________________
+Aplicaciones ELF
+Arquitectura modular.
+Aplicaciones actuales:
+•	Calculator 
+•	Notepad 
+•	Sheet 
+•	Mini Paint 
+•	Image Viewer 
+•	Log Viewer 
+•	SYSINFO 
+•	Pong 
+•	Snake 
+•	Tetris 
+•	Breakout 
+•	TactileBrowser 
+Todas ejecutándose como programas independientes.
+________________________________________
+TactileBrowser
+Navegador web ligero basado en Lexbor.
+Funciones:
+•	HTTP 
+•	HTTPS 
+•	render HTML 
+•	navegación táctil 
+•	navegación mediante teclado 
+•	historial 
+•	favoritos 
+•	scroll 
+•	enlaces 
+•	formularios GET 
+•	formularios POST 
+•	cookies 
+•	sesiones 
+•	GeoIP 
+•	soporte UTF-8 
+•	teclado español completo 
+•	render Style Lite 
+•	arquitectura RAM-safe 
+________________________________________
+Style Lite
+En lugar de implementar CSS completo, TactileBrowser interpreta únicamente los estilos más importantes:
+•	color 
+•	font-weight 
+•	<b> 
+•	<strong> 
+•	<font color> 
+Esto proporciona una mejora visual muy importante con un consumo mínimo de memoria.
+________________________________________
+Arquitectura RAM-safe
+Una de las características más importantes del proyecto.
+Todos los buffers grandes se reservan únicamente durante su utilización.
+Posteriormente son liberados.
+Esto permitió la convivencia estable de:
+•	USB Host 
+•	HUB 
+•	HID 
+•	MSC 
+•	WiFi 
+•	Navegador 
+sin provocar errores ESP_ERR_NO_MEM.
+________________________________________
+Conectividad
+•	WiFi STA 
+•	HTTP Server 
+•	NTP 
+•	HTTPS 
+•	USB Host 
+________________________________________
+Sistema de archivos
+LittleFS
+    │
+    ├── /root
+    ├── /root/bin
+    ├── configuración
+    └── navegador
 
-Escalon basado en 10AL_FIX4. Añade boton adelante `>`, pagina interna `about:history` y mantiene barra clasica superior.
+microSD
 
-# 10AI_TBROWSER_GUI_TOUCH_BUTTONS
+USB
+________________________________________
+Filosofía de desarrollo
+Durante todo el proyecto se siguió una regla muy estricta:
+Cada versión únicamente se consideraba válida cuando demostraba ser completamente estable.
+Una vez validada:
+•	se guardaba una copia 
+•	se colocaba un "candado" 
+•	nunca volvía a modificarse 
+Las nuevas mejoras siempre partían de una base estable.
+Este método permitió desarrollar el sistema sin perder nunca funcionalidades previamente conquistadas.
+________________________________________
+Objetivo alcanzado
+Arielo MiniPC OS demuestra que un ESP32-S3 puede comportarse como un pequeño ordenador multitarea capaz de ejecutar aplicaciones independientes, gestionar almacenamiento externo, utilizar dispositivos USB Host y navegar por Internet mediante un navegador HTML propio.
+Todo ello respetando las limitaciones del hardware y manteniendo una arquitectura ligera, modular y fácilmente ampliable.
+________________________________________
+Créditos
+Proyecto desarrollado por
+Ariel (EA7JTP)
+Con la asistencia técnica de (OpenAI) durante el diseño, depuración, optimización y documentación del proyecto.
+________________________________________
+Licencia
+Proyecto de carácter personal y experimental.
+Desarrollado con fines educativos, de investigación y aprendizaje.
+________________________________________
 
-Escalón basado en 10AH_FIX2: añade botones táctiles GT911 al TactileBrowser GUI interno, manteniendo teclado y motor HTML validado. Véase `README_10AI.md` y `CHANGELOG_10AI.md`.
+Una reflexión
+Este proyecto nació como una idea.
+Después llegaron los primeros errores, las primeras pruebas y los primeros pequeños éxitos.
+Con el tiempo dejó de ser un conjunto de programas independientes para convertirse en un sistema coherente, donde cada componente conoce su función y convive con los demás respetando los limitados recursos del ESP32-S3.
+Quizá la mejor definición de Arielo MiniPC OS no sea una descripción técnica, sino una frase pronunciada durante su desarrollo:
+"Es un conjunto de códigos, viviendo en armonía y felicidad."
+Esa frase resume perfectamente el espíritu del proyecto.
 
-# WAVESHARE_7_MINIPC_BREEZYBOX_LAB_10AC_TBROWSER_LOCAL_LINKS_NAV
-
-Base: `10AB_TBROWSER_TEXT_VIEWER_SCROLL` validada.
-
-Objetivo 10AC:
-
-- Mantener Lexbor integrado en firmware normal, con PSRAM-first.
-- Mantener `tbtest`, `tbrender` y `tbview` tal como venían de 10AB.
-- Añadir `tbbrowser`, un navegador local de texto con navegación básica.
-- Detectar enlaces HTML `<a href=...>` y numerarlos como `[1]`, `[2]`, etc.
-- Permitir abrir enlaces locales por número.
-- Permitir abrir otra ruta desde dentro con `o /sdcard/archivo.html`.
-- Permitir recargar con `r`.
-
-## Compilar
-
-```powershell
-cd D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_10AC_TBROWSER_LOCAL_LINKS_NAV
-idf.py fullclean
-idf.py build flash monitor
-```
-
-## Pruebas recomendadas
-
-```text
-tbtest
-tbtest parse
-tbrender file /sdcard/test.html
-tbview file /sdcard/test.html
-tbbrowser file /sdcard/test.html
-```
-
-También:
-
-```text
-tbbrowser sample
-tbbrowser /sdcard/test.html
-```
-
-## Controles dentro de tbbrowser
-
-```text
-n o ENTER  baja una página
-p          sube una página
-j/k        baja/sube una línea
-l          lista enlaces detectados
-numero     abre enlace local [n]
-o RUTA     abre archivo local
-r          recarga documento actual
-g/G        inicio/final
-h/?        ayuda
-q          salir
-```
-
-Notas:
-
-- Enlaces `http://`, `https://`, `mailto:` y `ftp://` se detectan pero aún no se abren.
-- Los enlaces relativos se resuelven respecto al directorio del archivo actual.
-- Si el documento es `sample`, un enlace relativo se intenta resolver desde `/sdcard/`.
-- Sigue sin CSS, imágenes ni red. Este escalón es navegación local HTML estable.
-
-## Arielo MiniPC OS 10AE - TactileBrowser bookmarks
-
-La rama 10AE mantiene el navegador local interno validado en 10AD y añade favoritos persistentes:
-
-- `tbbrowser file /sdcard/test_10ae_index.html`
-- `m` guarda la pagina actual en `/root/tbbrowser_favs.txt`
-- `v` lista favoritos y permite abrir uno
-- `tbbrowser bookmarks` abre directamente el selector de favoritos
-- `tbbrowser10ad` queda como fallback de la 10AD validada
-
-## 10AH - TactileBrowser GUI con paginas internas
-
-El boton WEB del escritorio abre ahora `tbbgui home`, que carga la pagina interna `about:home` generada por el propio navegador.
-Tambien se agregan `about:help` y `about:bookmarks`.
-
-## 10AH_FIX1
-
-Corrección de compilación: se adelanta el prototipo de `tbb10ah_chomp()` antes de su primer uso en la generación HTML de favoritos internos.
-
-
-## 10AH_FIX2
-
-Mantiene SM_400X240 activo durante toda la sesion GUI para evitar carreras del ISR RGB al navegar entre paginas.
-
-## 10AK - TactileBrowser GUI visual render polish
-
-Base sobre 10AJ_OK. Pulido visual del visor grafico: encabezados, listas, enlaces y scrollbar lateral.
-
-
-## 10AL_TBROWSER_NET_HTTP_NAVBAR
-
-Primer escalon de red: HTTP basico + boton URL. Ver `README_10AL.md`.
-
-
-## 10AN_FIX1
-- Added missing `rgb_display_set_mouse_busy(int busy)` prototype to both rgb_display headers to fix implicit declaration build error.
-
-
-## 10AN_FIX2_BUSY_CURSOR_HEADER_AND_LOCAL_PROTO
-- Blindaje del prototipo `rgb_display_set_mouse_busy(int busy)` en `include/rgb_display.h`, `rgb_display.h` y declaración local en `cmd_desktop_07A_GUI_SHELL.c` para evitar `implicit declaration` aunque CMake incluya otra ruta de cabecera.
-
-## Escalón 10AO
-
-Añadido soporte inicial HTTPS/TLS al TactileBrowser Lexbor GUI, manteniendo la barra clásica, historial bidireccional y el indicador WAIT de cabecera de 10AN_FIX3.
-
-## 10AQ_TBROWSER_DDG_RESULTS_POLISH
-
-Pulido del buscador DuckDuckGo HTML: limpieza ligera de resultados, ventana LINK más útil y apertura directa de enlaces DDG con `uddg=`.

@@ -1,0 +1,1322 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.4\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN\build\breezybox_example.elf D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.4\tools\idf.py' '-p' 'COM5'
+Build:Mar 27 2021
+rst:0x1 �ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2ef0
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Jul  8 2026 19:37:46[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 001f4000[0m
+[0;32mI (76) boot:  3 storage          Unknown data     01 82 00204000 00d00000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c130020 size=a9c5ch (695388) map[0m
+[0;32mI (215) esp_image: segment 1: paddr=000b9c84 vaddr=3fc9c900 size=06394h ( 25492) load[0m
+[0;32mI (221) esp_image: segment 2: paddr=000c0020 vaddr=42000020 size=120154h (1179988) map[0m
+[0;32mI (429) esp_image: segment 3: paddr=001e017c vaddr=3fca2c94 size=00208h (   520) load[0m
+[0;32mI (430) esp_image: segment 4: paddr=001e038c vaddr=40374000 size=18820h (100384) load[0m
+[0;32mI (455) esp_image: segment 5: paddr=001f8bb4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (465) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (465) boot: Disabling RNG early entropy source...[0m
+[0;32mI (476) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (476) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (476) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (478) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (482) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (486) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (491) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (495) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (500) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (505) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (510) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (514) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (519) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (522) esp_psram: Speed: 80MHz[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (961) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (969) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (970) cpu_start: Pro cpu start user code[0m
+[0;32mI (970) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (971) app_init: Application information:[0m
+[0;32mI (975) app_init: Project name:     breezybox_example[0m
+[0;32mI (980) app_init: App version:      1[0m
+[0;32mI (983) app_init: Compile time:     Jul  8 2026 19:34:33[0m
+[0;32mI (988) app_init: ELF file SHA256:  8bbd38c73...[0m
+[0;32mI (993) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (996) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1000) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1004) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1008) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1015) heap_init: At 3FCB60D0 len 00033640 (205 KiB): RAM[0m
+[0;32mI (1020) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1025) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1030) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (1036) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1043) spi_flash: detected chip: generic[0m
+[0;32mI (1046) spi_flash: flash io: dio[0m
+[0;33mW (1049) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1059) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1066) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1072) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (1076) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1081) main_task: Started on CPU0[0m
+[0;32mI (1091) main_task: Calling app_main()[0m
+[0;32mI (1091) display: Initializing RGB LCD (Bounce Buffer Text Mode - Zero Copy)[0m
+[0;32mI (1091) display: Display ready: 800x480 pixels, 100x29 chars[0m
+[0;32mI (1101) display: Framebuffer in INTERNAL RAM at 0x3fcc013c (96000 bytes)[0m
+[0;32mI (1111) display: Switched to graphics mode 129 (400x240 scale=2 margin=0,0)[0m
+[0;32mI (1311) MINIPC_SD: Inicializando microSD 02B...[0m
+
+[02B] Inicializando SD...
+[0;32mI (1311) MINIPC_SD: CH422G OK, SD_CS en EXIO4[0m
+[0;32mI (1391) MINIPC_SD: Montando en /sdcard...[0m
+[0;32mI (1391) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1431) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (1491) MINIPC_SD: SD OK montada en /sdcard, size=14910 MB[0m
+[02B] SDCARD montada en /sdcard
+[02B] SDCARD size=14910 MB
+[02B] Test escritura SD OK: /sdcard/logs/minipc_02b_boot.txt
+[02D_USBSEL] ciclo USB_SEL HIGH, WR_IO=0xFF
+[02D_USBSEL] ciclo USB_SEL LOW + SD_CS LOW, WR_IO=0xCF
+[0;32mI (2221) MINIPC_USBSEL: USB_SEL cycle HIGH->LOW OK + SD_CS LOW, WR_IO=0xCF[0m
+
+[08A_TOUCH] Inicializando GT911 (0x14)...
+[0;32mI (3231) minipc_touch: Init GT911[0m
+[08A_TOUCH] GT911 detectado en 0x14
+[08A_TOUCH] GT911 OK en 0x14 (status=0x80). Touch activo.
+[0;32mI (3451) minipc_touch: GT911 OK addr=0x14 status=0x80[0m
+[0;32mI (3671) usb_hid04a: Inicializando USB HID Keyboard+Mouse 05A Pointer...[0m
+
+[05A_USB] Inicializando USB HID Keyboard+Mouse + puntero...
+[0;32mI (3701) usb_hid04a: USB Host library OK[0m
+[0;32mI (3701) usb_hid04a: USB HID app task lista[0m
+[04A_USB] Conecte teclado/mouse USB o receptor 2.4GHz
+[04A_USB] Para HUB externo: CONFIG_USB_HOST_HUBS_SUPPORTED=y
+[0;32mI (3701) usb_hid04a: USB HID Keyboard+Mouse + puntero listo, esperando dispositivo[0m
+
+[MSC_HOTPLUG] Inicializando cliente USB MSC hot-plug...
+[0;32mI (3911) minipc_msc: Inicializando USB MSC host driver hot-plug[0m
+[MSC_HOTPLUG] Cliente MSC 01E_FIX1 listo. VFS persistente compile fix activo.
+[0;32mI (3911) minipc_msc: USB MSC hot-plug listo, esperando pendrive[0m
+[1;31mE (4011) HUB: Root port reset failed[0m
+
+[02E_WIFI] WiFi async task arrancando...
+
+[02E_WIFI] Inicializando WiFi app_main...
+[0;32mI (4221) MINIPC_WIFI: Inicializando WiFi app_main[0m
+[0;32mI (4221) pp: pp rom version: e7ae62f[0m
+[0;32mI (4221) net80211: net80211 rom version: e7ae62f[0m
+[02E_WIFI] WiFi programada async delay=0 ms
+[NTP_FAST] Servicio NTP vivo; esperando WiFi/IP...
+[0;32mI (4231) minipc_ntp: NTP_FAST worker arrancado[0m
+[0;32mI (4241) wifi:wifi driver task: 3fce6b9c, prio:23, stack:6656, core=0[0m
+[0;32mI (4261) wifi:wifi firmware version: 0947e8b[0m
+[0;32mI (4261) wifi:wifi certification version: v7.0[0m
+[0;32mI (4261) wifi:config NVS flash: enabled[0m
+[0;32mI (4261) wifi:config nano formatting: disabled[0m
+[0;32mI (4261) wifi:Init data frame dynamic rx buffer num: 16[0m
+[0;32mI (4271) wifi:Init dynamic rx mgmt buffer num: 3[0m
+[0;32mI (4271) wifi:Init management short buffer num: 32[0m
+[0;32mI (4281) wifi:Init static tx buffer num: 5[0m
+[0;32mI (4281) wifi:Init tx cache buffer num: 16[0m
+[0;32mI (4281) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (4291) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (4291) wifi:Init static rx buffer num: 3[0m
+[0;32mI (4301) wifi:Init dynamic rx buffer num: 16[0m
+[0;32mI (4301) wifi_init: rx ba win: 3[0m
+[0;32mI (4301) wifi_init: accept mbox: 6[0m
+[0;32mI (4311) wifi_init: tcpip mbox: 32[0m
+[0;32mI (4311) wifi_init: udp mbox: 6[0m
+[0;32mI (4311) wifi_init: tcp mbox: 6[0m
+[0;32mI (4321) wifi_init: tcp tx win: 5760[0m
+[0;32mI (4321) wifi_init: tcp rx win: 5760[0m
+[0;32mI (4321) wifi_init: tcp mss: 1440[0m
+[0;32mI (4321) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (4331) MINIPC_WIFI: Conectando a SSID='MiFibra-4ED3-24G'...[0m
+[02E_WIFI] WIFI conectando a MiFibra-4ED3-24G...
+[0;32mI (4341) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (4411) wifi:mode : sta (90:70:69:1b:c7:34)[0m
+[0;32mI (4411) wifi:enable tsf[0m
+[0;32mI (4421) MINIPC_WIFI: STA_START -> connect[0m
+[0;32mI (4431) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4431) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4441) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4451) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4471) wifi:<ba-add>idx:0 (ifx:0, f8:08:4f:de:8b:7b), tid:0, ssn:0, winSize:64[0m
+[1;31mE (4481) HUB: Root port reset failed[0m
+[0;32mI (4491) wifi:connected with MiFibra-4ED3-24G, aid = 8, channel 11, BW20, bssid = f8:08:4f:de:8b:7b[0m
+[0;32mI (4501) wifi:security: WPA2-PSK, phy: bgn, rssi: -54, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (4511) wifi:pm start, type: 1[0m
+
+[0;32mI (4511) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4511) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (4531) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (5161) usb_hid04a: USB HID conectado proto=KEYBOARD subclass=1[0m
+
+[04A_USB] TECLADO USB HID conectado
+[0;32mI (5161) usb_hid04a: TECLADO USB HID listo[0m
+[0;32mI (5161) usb_hid04a: USB HID conectado proto=MOUSE subclass=1[0m
+
+[05A_USB] MOUSE USB HID conectado - puntero activo
+[0;32mI (5171) usb_hid04a: MOUSE USB HID listo x=200 y=120[0m
+
+[MSC_HOTPLUG] Pendrive CONECTADO (addr=3)
+[0;32mI (5541) minipc_msc: MSC_DEVICE_CONNECTED addr=3[0m
+[0;33mW (5541) hid-host: No HID device at USB port 3[0m
+[MSC_HOTPLUG] Gestionando connect addr=3 mounted=0 dev=0x0 vfs=0x0
+[1;31mE (5801) USB_MSC_SCSI: Sense error codes: Sense Key 0x06, ASC: 0x28, ASCQ: 0x00[0m
+[1;31mE (5801) USB_MSC_SCSI: Sense error description: UNIT ATTENTION: not ready to ready change, medium may have changed[0m
+[MSC_HOTPLUG] Capacidad: 14999 MB, sector=512, sectores=30719999
+[0;32mI (6061) MSC VFS: ARIELO 01E persistent VFS registered /usb drive=1:[0m
+[MSC_HOTPLUG] Pendrive MONTADO en /usb (intento 1, gen=1)
+[06A_MSC] Contenido de /usb:
+   [FILE] paint.bmp
+   [DIR ] identif_tuner
+   [DIR ] WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN
+   [FILE] minipc_02b_boot.txt
+   [FILE] nota.txt
+   [DIR ] logs
+   [FILE] PRUEBA.TXT
+   [FILE] browser_favs.txt
+   [FILE] prueba1.csv
+   [FILE] sheet.csv
+   [FILE] prueba2.csv
+   [FILE] recuperado.txt
+   [FILE] minipc_02b_boot.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt
+   [FILE] celeste.xtensa
+   [DIR ] profe
+   [FILE] profe.tar.gz
+   [FILE] snake.xtensa.elf
+   [FILE] snake.elf
+   [FILE] pruebapaintmini.bmp
+   [FILE] tdt_analiz_RELEASE_1_20F_final.tar.gz
+   [DIR ] tdt_analiz_RELEASE_1_20F_final
+   [FILE] pong.elf
+   [FILE] pong.xtensa.elf
+   [FILE] tetris.elf
+   [FILE] tetris.xtensa.elf
+   [FILE] breakout.elf
+   [FILE] breakout.xtensa.elf
+   [DIR ] System Volume Information
+   [FILE] calculator.elf
+   [FILE] calculator.xtensa.elf
+   [FILE] log_viewer.elf
+   [FILE] log_viewer.xtensa.elf
+   [FILE] logs.txt
+   [FILE] log.txt
+   [FILE] mini_paint.elf
+   [FILE] mini_paint.xtensa.elf
+   [FILE] image_viewer.elf
+   [FILE] image_viewer.xtensa.elf
+   [FILE] LOGO_EA7JTP.bmp
+   [FILE] notepad.elf
+   [FILE] notepad.xtensa.elf
+   [FILE] test_meta_10e.html
+   [FILE] final_10e.html
+   [FILE] sysinfo.elf
+   [FILE] sysinfo.xtensa.elf
+   [FILE] sheet.elf
+   [FILE] sheet.xtensa.elf
+   [FILE] tactilebrowser.elf
+   [FILE] tactilebrowser.xtensa.elf
+   [FILE] test.html
+   [FILE] test_links.html
+   [FILE] test_10ad_page2.html
+   [FILE] test_10ad_index.html
+   [FILE] test_10ae_page2.html
+   [FILE] test_10ae_index.html
+   [FILE] test_10af_gui.html
+   [FILE] test_10ag_home.html
+   [FILE] test_10ak_visual.html
+[06A_MSC] 60 entradas en raiz
+[0;32mI (6891) esp_netif_handlers: sta ip: 192.168.1.56, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (6891) MINIPC_WIFI: WiFi conectada, IP=192.168.1.56[0m
+[02E_WIFI] WIFI conectada IP=192.168.1.56
+[0;32mI (6891) MINIPC_WIFI: WiFi OK IP=192.168.1.56[0m
+[02E_WIFI] WIFI OK IP=192.168.1.56
+[0;32mI (7231) minipc_ntp: SNTP iniciado/reiniciado intento=1 motivo=wifi_ready TZ=Europe/Madrid[0m
+[NTP_FAST] intento=1 motivo=wifi_ready WiFi IP=192.168.1.56
+[0;32mI (8771) display: Freed graphics framebuffer[0m
+[0;32mI (8771) display: Switched to text mode[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x11061106  PS      : 0x00050033  A0      : 0x11061106  A1      : 0x3fcbf240  
+A2      : 0x11061106  A3      : 0x11061106  A4      : 0x11061106  A5      : 0x11061106  
+A6      : 0x11061106  A7      : 0x11061106  A8      : 0x11061106  A9      : 0x11061106  
+A10     : 0x11061106  A11     : 0x11061106  A12     : 0x11061106  A13     : 0x11061106  
+A14     : 0x11061106  A15     : 0x11061106  SAR     : 0x00000006  EXCCAUSE: 0x00000014  
+EXCVADDR: 0x11061104  LBEG    : 0x11061106  LEND    : 0x11061106  LCOUNT  : 0x11061106  
+
+
+Backtrace: 0x11061103:0x3fcbf240 0x11061103:0x11061106 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 8bbd38c73
+
+Rebooting...
+ �ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380a85
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2ef0
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul  8 2026 19:37:46[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (74) boot:  2 factory          factory app      00 00 00010000 001f4000[0m
+[0;32mI (80) boot:  3 storage          Unknown data     01 82 00204000 00d00000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c130020 size=a9c5ch (695388) map[0m
+[0;32mI (220) esp_image: segment 1: paddr=000b9c84 vaddr=3fc9c900 size=06394h ( 25492) load[0m
+[0;32mI (225) esp_image: segment 2: paddr=000c0020 vaddr=42000020 size=120154h (1179988) map[0m
+[0;32mI (434) esp_image: segment 3: paddr=001e017c vaddr=3fca2c94 size=00208h (   520) load[0m
+[0;32mI (434) esp_image: segment 4: paddr=001e038c vaddr=40374000 size=18820h (100384) load[0m
+[0;32mI (459) esp_image: segment 5: paddr=001f8bb4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (469) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (469) boot: Disabling RNG early entropy source...[0m
+[0;32mI (480) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (480) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (480) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (482) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (486) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (491) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (495) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (500) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (505) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (509) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (514) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (519) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (523) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (526) esp_psram: Speed: 80MHz[0m
+[0;32mI (530) cpu_start: Multicore app[0m
+[0;32mI (965) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (973) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (974) cpu_start: Pro cpu start user code[0m
+[0;32mI (974) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (976) app_init: Application information:[0m
+[0;32mI (979) app_init: Project name:     breezybox_example[0m
+[0;32mI (984) app_init: App version:      1[0m
+[0;32mI (988) app_init: Compile time:     Jul  8 2026 19:34:33[0m
+[0;32mI (993) app_init: ELF file SHA256:  8bbd38c73...[0m
+[0;32mI (997) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (1001) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1005) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1009) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1013) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1019) heap_init: At 3FCB60D0 len 00033640 (205 KiB): RAM[0m
+[0;32mI (1024) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1030) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1035) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (1040) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1048) spi_flash: detected chip: generic[0m
+[0;32mI (1051) spi_flash: flash io: dio[0m
+[0;33mW (1054) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1064) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1070) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1077) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (1081) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1085) main_task: Started on CPU0[0m
+[0;32mI (1095) main_task: Calling app_main()[0m
+[0;32mI (1095) display: Initializing RGB LCD (Bounce Buffer Text Mode - Zero Copy)[0m
+[0;32mI (1095) display: Display ready: 800x480 pixels, 100x29 chars[0m
+[0;32mI (1105) display: Framebuffer in INTERNAL RAM at 0x3fcc013c (96000 bytes)[0m
+[0;32mI (1115) display: Switched to graphics mode 129 (400x240 scale=2 margin=0,0)[0m
+[0;32mI (1315) MINIPC_SD: Inicializando microSD 02B...[0m
+
+[02B] Inicializando SD...
+[0;32mI (1315) MINIPC_SD: CH422G OK, SD_CS en EXIO4[0m
+[0;32mI (1395) MINIPC_SD: Montando en /sdcard...[0m
+[0;32mI (1395) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1435) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (1495) MINIPC_SD: SD OK montada en /sdcard, size=14910 MB[0m
+[02B] SDCARD montada en /sdcard
+[02B] SDCARD size=14910 MB
+[02B] Test escritura SD OK: /sdcard/logs/minipc_02b_boot.txt
+[02D_USBSEL] ciclo USB_SEL HIGH, WR_IO=0xFF
+[02D_USBSEL] ciclo USB_SEL LOW + SD_CS LOW, WR_IO=0xCF
+[0;32mI (2225) MINIPC_USBSEL: USB_SEL cycle HIGH->LOW OK + SD_CS LOW, WR_IO=0xCF[0m
+
+[08A_TOUCH] Inicializando GT911 (0x14)...
+[0;32mI (3235) minipc_touch: Init GT911[0m
+[08A_TOUCH] GT911 detectado en 0x5D
+[08A_TOUCH] GT911 OK en 0x5D (status=0x80). Touch activo.
+[0;32mI (3455) minipc_touch: GT911 OK addr=0x5D status=0x80[0m
+[0;32mI (3675) usb_hid04a: Inicializando USB HID Keyboard+Mouse 05A Pointer...[0m
+
+[05A_USB] Inicializando USB HID Keyboard+Mouse + puntero...
+[0;32mI (3705) usb_hid04a: USB Host library OK[0m
+[0;32mI (3705) usb_hid04a: USB HID app task lista[0m
+[04A_USB] Conecte teclado/mouse USB o receptor 2.4GHz
+[04A_USB] Para HUB externo: CONFIG_USB_HOST_HUBS_SUPPORTED=y
+[0;32mI (3705) usb_hid04a: USB HID Keyboard+Mouse + puntero listo, esperando dispositivo[0m
+
+[MSC_HOTPLUG] Inicializando cliente USB MSC hot-plug...
+[0;32mI (3915) minipc_msc: Inicializando USB MSC host driver hot-plug[0m
+[MSC_HOTPLUG] Cliente MSC 01E_FIX1 listo. VFS persistente compile fix activo.
+[0;32mI (3915) minipc_msc: USB MSC hot-plug listo, esperando pendrive[0m
+[1;31mE (4015) HUB: Root port reset failed[0m
+
+[02E_WIFI] WiFi async task arrancando...
+
+[02E_WIFI] Inicializando WiFi app_main...
+[0;32mI (4225) MINIPC_WIFI: Inicializando WiFi app_main[0m
+[0;32mI (4225) pp: pp rom version: e7ae62f[0m
+[0;32mI (4225) net80211: net80211 rom version: e7ae62f[0m
+[02E_WIFI] WiFi programada async delay=0 ms
+[NTP_FAST] Servicio NTP vivo; esperando WiFi/IP...
+[0;32mI (4235) minipc_ntp: Hora valida detectada[0m
+[0;32mI (4245) wifi:wifi driver task: 3fce6b9c, prio:23, stack:6656, core=0[0m
+[0;32mI (4265) wifi:wifi firmware version: 0947e8b[0m
+[0;32mI (4265) wifi:wifi certification version: v7.0[0m
+[0;32mI (4265) wifi:config NVS flash: enabled[0m
+[0;32mI (4265) wifi:config nano formatting: disabled[0m
+[0;32mI (4265) wifi:Init data frame dynamic rx buffer num: 16[0m
+[0;32mI (4275) wifi:Init dynamic rx mgmt buffer num: 3[0m
+[0;32mI (4275) wifi:Init management short buffer num: 32[0m
+[0;32mI (4285) wifi:Init static tx buffer num: 5[0m
+[0;32mI (4285) wifi:Init tx cache buffer num: 16[0m
+[0;32mI (4285) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (4295) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (4295) wifi:Init static rx buffer num: 3[0m
+[0;32mI (4305) wifi:Init dynamic rx buffer num: 16[0m
+[0;32mI (4305) wifi_init: rx ba win: 3[0m
+[0;32mI (4305) wifi_init: accept mbox: 6[0m
+[0;32mI (4315) wifi_init: tcpip mbox: 32[0m
+[0;32mI (4315) wifi_init: udp mbox: 6[0m
+[0;32mI (4315) wifi_init: tcp mbox: 6[0m
+[0;32mI (4325) wifi_init: tcp tx win: 5760[0m
+[0;32mI (4325) wifi_init: tcp rx win: 5760[0m
+[0;32mI (4325) wifi_init: tcp mss: 1440[0m
+[0;32mI (4325) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (4335) MINIPC_WIFI: Conectando a SSID='MiFibra-4ED3-24G'...[0m
+[02E_WIFI] WIFI conectando a MiFibra-4ED3-24G...
+[0;32mI (4345) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (4415) wifi:mode : sta (90:70:69:1b:c7:34)[0m
+[0;32mI (4415) wifi:enable tsf[0m
+[NTP_FAST] Hora valida detectada
+[0;32mI (4425) MINIPC_WIFI: STA_START -> connect[0m
+[0;32mI (4425) minipc_ntp: NTP_FAST worker arrancado[0m
+[0;32mI (4435) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4435) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4445) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4455) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4465) wifi:<ba-add>idx:0 (ifx:0, f8:08:4f:de:8b:7b), tid:0, ssn:0, winSize:64[0m
+[1;31mE (4485) HUB: Root port reset failed[0m
+[0;32mI (4495) wifi:connected with MiFibra-4ED3-24G, aid = 8, channel 11, BW20, bssid = f8:08:4f:de:8b:7b[0m
+[0;32mI (4495) wifi:security: WPA2-PSK, phy: bgn, rssi: -52, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (4505) wifi:pm start, type: 1[0m
+
+[0;32mI (4505) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4515) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (4555) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[1;31mE (4835) HUB: Root port reset failed[0m
+[0;32mI (5485) usb_hid04a: USB HID conectado proto=KEYBOARD subclass=1[0m
+
+[04A_USB] TECLADO USB HID conectado
+[0;32mI (5485) usb_hid04a: TECLADO USB HID listo[0m
+[0;32mI (5485) usb_hid04a: USB HID conectado proto=MOUSE subclass=1[0m
+
+[05A_USB] MOUSE USB HID conectado - puntero activo
+[0;32mI (5495) usb_hid04a: MOUSE USB HID listo x=200 y=120[0m
+[0;32mI (5595) esp_netif_handlers: sta ip: 192.168.1.56, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5595) MINIPC_WIFI: WiFi conectada, IP=192.168.1.56[0m
+[02E_WIFI] WIFI conectada IP=192.168.1.56
+[0;32mI (5595) MINIPC_WIFI: WiFi OK IP=192.168.1.56[0m
+[02E_WIFI] WIFI OK IP=192.168.1.56
+
+[MSC_HOTPLUG] Pendrive CONECTADO (addr=3)
+[0;32mI (5865) minipc_msc: MSC_DEVICE_CONNECTED addr=3[0m
+[0;33mW (5865) hid-host: No HID device at USB port 3[0m
+[MSC_HOTPLUG] Gestionando connect addr=3 mounted=0 dev=0x0 vfs=0x0
+[1;31mE (6125) USB_MSC_SCSI: Sense error codes: Sense Key 0x06, ASC: 0x28, ASCQ: 0x00[0m
+[1;31mE (6125) USB_MSC_SCSI: Sense error description: UNIT ATTENTION: not ready to ready change, medium may have changed[0m
+[MSC_HOTPLUG] Capacidad: 14999 MB, sector=512, sectores=30719999
+[0;32mI (6385) MSC VFS: ARIELO 01E persistent VFS registered /usb drive=1:[0m
+[MSC_HOTPLUG] Pendrive MONTADO en /usb (intento 1, gen=1)
+[06A_MSC] Contenido de /usb:
+   [FILE] paint.bmp
+   [DIR ] identif_tuner
+   [DIR ] WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN
+   [FILE] minipc_02b_boot.txt
+   [FILE] nota.txt
+   [DIR ] logs
+   [FILE] PRUEBA.TXT
+   [FILE] browser_favs.txt
+   [FILE] prueba1.csv
+   [FILE] sheet.csv
+   [FILE] prueba2.csv
+   [FILE] recuperado.txt
+   [FILE] minipc_02b_boot.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt
+   [FILE] celeste.xtensa
+   [DIR ] profe
+   [FILE] profe.tar.gz
+   [FILE] snake.xtensa.elf
+   [FILE] snake.elf
+   [FILE] pruebapaintmini.bmp
+   [FILE] tdt_analiz_RELEASE_1_20F_final.tar.gz
+   [DIR ] tdt_analiz_RELEASE_1_20F_final
+   [FILE] pong.elf
+   [FILE] pong.xtensa.elf
+   [FILE] tetris.elf
+   [FILE] tetris.xtensa.elf
+   [FILE] breakout.elf
+   [FILE] breakout.xtensa.elf
+   [DIR ] System Volume Information
+   [FILE] calculator.elf
+   [FILE] calculator.xtensa.elf
+   [FILE] log_viewer.elf
+   [FILE] log_viewer.xtensa.elf
+   [FILE] logs.txt
+   [FILE] log.txt
+   [FILE] mini_paint.elf
+   [FILE] mini_paint.xtensa.elf
+   [FILE] image_viewer.elf
+   [FILE] image_viewer.xtensa.elf
+   [FILE] LOGO_EA7JTP.bmp
+   [FILE] notepad.elf
+   [FILE] notepad.xtensa.elf
+   [FILE] test_meta_10e.html
+   [FILE] final_10e.html
+   [FILE] sysinfo.elf
+   [FILE] sysinfo.xtensa.elf
+   [FILE] sheet.elf
+   [FILE] sheet.xtensa.elf
+   [FILE] tactilebrowser.elf
+   [FILE] tactilebrowser.xtensa.elf
+   [FILE] test.html
+   [FILE] test_links.html
+   [FILE] test_10ad_page2.html
+   [FILE] test_10ad_index.html
+   [FILE] test_10ae_page2.html
+   [FILE] test_10ae_index.html
+   [FILE] test_10af_gui.html
+   [FILE] test_10ag_home.html
+   [FILE] test_10ak_visual.html
+[06A_MSC] 60 entradas en raiz
+[0;32mI (7515) display: Freed graphics framebuffer[0m
+[0;32mI (7515) display: Switched to text mode[0m
+Guru Meditation Error: Core  0 panic'ed (InstrFetchProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x11061106  PS      : 0x00050033  A0      : 0x11061106  A1      : 0x3fcbfe90  
+A2      : 0x11061106  A3      : 0x11061106  A4      : 0x11061106  A5      : 0x11061106  
+A6      : 0x11061106  A7      : 0x11061106  A8      : 0x11061106  A9      : 0x11061106  
+A10     : 0x11061106  A11     : 0x11061106  A12     : 0x11061106  A13     : 0x11061106  
+A14     : 0x11061106  A15     : 0x11061106  SAR     : 0x00000006  EXCCAUSE: 0x00000014  
+EXCVADDR: 0x11061104  LBEG    : 0x11061106  LEND    : 0x11061106  LCOUNT  : 0x11061106  
+
+
+Backtrace: 0x11061103:0x3fcbfe90 0x11061103:0x11061106 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 8bbd38c73
+
+Rebooting...
+ �ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40380a85
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2ef0
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul  8 2026 19:37:46[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (67) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (74) boot:  2 factory          factory app      00 00 00010000 001f4000[0m
+[0;32mI (80) boot:  3 storage          Unknown data     01 82 00204000 00d00000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (90) esp_image: segment 0: paddr=00010020 vaddr=3c130020 size=a9c5ch (695388) map[0m
+[0;32mI (220) esp_image: segment 1: paddr=000b9c84 vaddr=3fc9c900 size=06394h ( 25492) load[0m
+[0;32mI (225) esp_image: segment 2: paddr=000c0020 vaddr=42000020 size=120154h (1179988) map[0m
+[0;32mI (434) esp_image: segment 3: paddr=001e017c vaddr=3fca2c94 size=00208h (   520) load[0m
+[0;32mI (434) esp_image: segment 4: paddr=001e038c vaddr=40374000 size=18820h (100384) load[0m
+[0;32mI (459) esp_image: segment 5: paddr=001f8bb4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (469) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (469) boot: Disabling RNG early entropy source...[0m
+[0;32mI (480) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (480) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (480) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (482) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (486) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (491) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (495) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (500) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (505) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (509) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (514) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (519) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (523) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (526) esp_psram: Speed: 80MHz[0m
+[0;32mI (530) cpu_start: Multicore app[0m
+[0;32mI (965) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (973) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (974) cpu_start: Pro cpu start user code[0m
+[0;32mI (974) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (976) app_init: Application information:[0m
+[0;32mI (979) app_init: Project name:     breezybox_example[0m
+[0;32mI (984) app_init: App version:      1[0m
+[0;32mI (988) app_init: Compile time:     Jul  8 2026 19:34:33[0m
+[0;32mI (993) app_init: ELF file SHA256:  8bbd38c73...[0m
+[0;32mI (997) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (1001) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1005) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1009) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1013) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1019) heap_init: At 3FCB60D0 len 00033640 (205 KiB): RAM[0m
+[0;32mI (1024) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1030) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1035) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (1040) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1048) spi_flash: detected chip: generic[0m
+[0;32mI (1051) spi_flash: flash io: dio[0m
+[0;33mW (1054) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1064) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1070) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1077) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (1081) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1085) main_task: Started on CPU0[0m
+[0;32mI (1095) main_task: Calling app_main()[0m
+[0;32mI (1095) display: Initializing RGB LCD (Bounce Buffer Text Mode - Zero Copy)[0m
+[0;32mI (1095) display: Display ready: 800x480 pixels, 100x29 chars[0m
+[0;32mI (1105) display: Framebuffer in INTERNAL RAM at 0x3fcc013c (96000 bytes)[0m
+[0;32mI (1115) display: Switched to graphics mode 129 (400x240 scale=2 margin=0,0)[0m
+[0;32mI (1315) MINIPC_SD: Inicializando microSD 02B...[0m
+
+[02B] Inicializando SD...
+[0;32mI (1315) MINIPC_SD: CH422G OK, SD_CS en EXIO4[0m
+[0;32mI (1395) MINIPC_SD: Montando en /sdcard...[0m
+[0;32mI (1395) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1435) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (1495) MINIPC_SD: SD OK montada en /sdcard, size=14910 MB[0m
+[02B] SDCARD montada en /sdcard
+[02B] SDCARD size=14910 MB
+[02B] Test escritura SD OK: /sdcard/logs/minipc_02b_boot.txt
+[02D_USBSEL] ciclo USB_SEL HIGH, WR_IO=0xFF
+[02D_USBSEL] ciclo USB_SEL LOW + SD_CS LOW, WR_IO=0xCF
+[0;32mI (2225) MINIPC_USBSEL: USB_SEL cycle HIGH->LOW OK + SD_CS LOW, WR_IO=0xCF[0m
+
+[08A_TOUCH] Inicializando GT911 (0x14)...
+[0;32mI (3235) minipc_touch: Init GT911[0m
+[08A_TOUCH] GT911 detectado en 0x5D
+[08A_TOUCH] GT911 OK en 0x5D (status=0x80). Touch activo.
+[0;32mI (3455) minipc_touch: GT911 OK addr=0x5D status=0x80[0m
+[0;32mI (3675) usb_hid04a: Inicializando USB HID Keyboard+Mouse 05A Pointer...[0m
+
+[05A_USB] Inicializando USB HID Keyboard+Mouse + puntero...
+[0;32mI (3705) usb_hid04a: USB Host library OK[0m
+[0;32mI (3705) usb_hid04a: USB HID app task lista[0m
+[04A_USB] Conecte teclado/mouse USB o receptor 2.4GHz
+[04A_USB] Para HUB externo: CONFIG_USB_HOST_HUBS_SUPPORTED=y
+[0;32mI (3705) usb_hid04a: USB HID Keyboard+Mouse + puntero listo, esperando dispositivo[0m
+
+[MSC_HOTPLUG] Inicializando cliente USB MSC hot-plug...
+[0;32mI (3915) minipc_msc: Inicializando USB MSC host driver hot-plug[0m
+[MSC_HOTPLUG] Cliente MSC 01E_FIX1 listo. VFS persistente compile fix activo.
+[0;32mI (3915) minipc_msc: USB MSC hot-plug listo, esperando pendrive[0m
+[1;31mE (4015) HUB: Root port reset failed[0m
+
+[02E_WIFI] WiFi async task arrancando...
+
+[02E_WIFI] Inicializando WiFi app_main...
+[0;32mI (4225) MINIPC_WIFI: Inicializando WiFi app_main[0m
+[0;32mI (4225) pp: pp rom version: e7ae62f[0m
+[0;32mI (4225) net80211: net80211 rom version: e7ae62f[0m
+[02E_WIFI] WiFi programada async delay=0 ms
+[NTP_FAST] Servicio NTP vivo; esperando WiFi/IP...
+[0;32mI (4235) minipc_ntp: Hora valida detectada[0m
+[0;32mI (4245) wifi:wifi driver task: 3fce6b9c, prio:23, stack:6656, core=0[0m
+[0;32mI (4265) wifi:wifi firmware version: 0947e8b[0m
+[0;32mI (4265) wifi:wifi certification version: v7.0[0m
+[0;32mI (4265) wifi:config NVS flash: enabled[0m
+[0;32mI (4265) wifi:config nano formatting: disabled[0m
+[0;32mI (4265) wifi:Init data frame dynamic rx buffer num: 16[0m
+[0;32mI (4275) wifi:Init dynamic rx mgmt buffer num: 3[0m
+[0;32mI (4275) wifi:Init management short buffer num: 32[0m
+[0;32mI (4285) wifi:Init static tx buffer num: 5[0m
+[0;32mI (4285) wifi:Init tx cache buffer num: 16[0m
+[0;32mI (4285) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (4295) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (4295) wifi:Init static rx buffer num: 3[0m
+[0;32mI (4305) wifi:Init dynamic rx buffer num: 16[0m
+[0;32mI (4305) wifi_init: rx ba win: 3[0m
+[0;32mI (4305) wifi_init: accept mbox: 6[0m
+[0;32mI (4315) wifi_init: tcpip mbox: 32[0m
+[0;32mI (4315) wifi_init: udp mbox: 6[0m
+[0;32mI (4315) wifi_init: tcp mbox: 6[0m
+[0;32mI (4325) wifi_init: tcp tx win: 5760[0m
+[0;32mI (4325) wifi_init: tcp rx win: 5760[0m
+[0;32mI (4325) wifi_init: tcp mss: 1440[0m
+[0;32mI (4325) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (4335) MINIPC_WIFI: Conectando a SSID='MiFibra-4ED3-24G'...[0m
+[02E_WIFI] WIFI conectando a MiFibra-4ED3-24G...
+[0;32mI (4345) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (4415) wifi:mode : sta (90:70:69:1b:c7:34)[0m
+[0;32mI (4415) wifi:enable tsf[0m
+[NTP_FAST] Hora valida detectada
+[0;32mI (4425) MINIPC_WIFI: STA_START -> connect[0m
+[0;32mI (4425) minipc_ntp: NTP_FAST worker arrancado[0m
+[0;32mI (4435) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4435) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4455) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4465) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4475) wifi:<ba-add>idx:0 (ifx:0, f8:08:4f:de:8b:7b), tid:0, ssn:0, winSize:64[0m
+[1;31mE (4485) HUB: Root port reset failed[0m
+[0;32mI (4485) wifi:connected with MiFibra-4ED3-24G, aid = 8, channel 11, BW20, bssid = f8:08:4f:de:8b:7b[0m
+[0;32mI (4495) wifi:security: WPA2-PSK, phy: bgn, rssi: -51, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (4505) wifi:pm start, type: 1[0m
+
+[0;32mI (4505) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4505) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (4665) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[1;31mE (4795) HUB: Root port reset failed[0m
+[1;31mE (5105) HUB: Root port reset failed[0m
+[1;31mE (5445) HUB: Root port reset failed[0m
+[0;32mI (5555) esp_netif_handlers: sta ip: 192.168.1.56, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5555) MINIPC_WIFI: WiFi conectada, IP=192.168.1.56[0m
+[02E_WIFI] WIFI conectada IP=192.168.1.56
+[0;32mI (5555) MINIPC_WIFI: WiFi OK IP=192.168.1.56[0m
+[02E_WIFI] WIFI OK IP=192.168.1.56
+[0;32mI (6075) usb_hid04a: USB HID conectado proto=KEYBOARD subclass=1[0m
+
+[04A_USB] TECLADO USB HID conectado
+[0;32mI (6075) usb_hid04a: TECLADO USB HID listo[0m
+[0;32mI (6075) usb_hid04a: USB HID conectado proto=MOUSE subclass=1[0m
+
+[05A_USB] MOUSE USB HID conectado - puntero activo
+[0;32mI (6085) usb_hid04a: MOUSE USB HID listo x=200 y=120[0m
+
+[MSC_HOTPLUG] Pendrive CONECTADO (addr=3)
+[0;32mI (6455) minipc_msc: MSC_DEVICE_CONNECTED addr=3[0m
+[0;33mW (6455) hid-host: No HID device at USB port 3[0m
+[MSC_HOTPLUG] Gestionando connect addr=3 mounted=0 dev=0x0 vfs=0x0
+[1;31mE (6715) USB_MSC_SCSI: Sense error codes: Sense Key 0x06, ASC: 0x28, ASCQ: 0x00[0m
+[1;31mE (6715) USB_MSC_SCSI: Sense error description: UNIT ATTENTION: not ready to ready change, medium may have changed[0m
+[MSC_HOTPLUG] Capacidad: 14999 MB, sector=512, sectores=30719999
+[0;32mI (6975) MSC VFS: ARIELO 01E persistent VFS registered /usb drive=1:[0m
+[MSC_HOTPLUG] Pendrive MONTADO en /usb (intento 1, gen=1)
+[06A_MSC] Contenido de /usb:
+   [FILE] paint.bmp
+   [DIR ] identif_tuner
+   [DIR ] WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN
+   [FILE] minipc_02b_boot.txt
+   [FILE] nota.txt
+   [DIR ] logs
+   [FILE] PRUEBA.TXT
+   [FILE] browser_favs.txt
+   [FILE] prueba1.csv
+   [FILE] sheet.csv
+   [FILE] prueba2.csv
+   [FILE] recuperado.txt
+   [FILE] minipc_02b_boot.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt
+   [FILE] celeste.xtensa
+   [DIR ] profe
+   [FILE] profe.tar.gz
+   [FILE] snake.xtensa.elf
+   [FILE] snake.elf
+   [FILE] pruebapaintmini.bmp
+   [FILE] tdt_analiz_RELEASE_1_20F_final.tar.gz
+   [DIR ] tdt_analiz_RELEASE_1_20F_final
+   [FILE] pong.elf
+   [FILE] pong.xtensa.elf
+   [FILE] tetris.elf
+   [FILE] tetris.xtensa.elf
+   [FILE] breakout.elf
+   [FILE] breakout.xtensa.elf
+   [DIR ] System Volume Information
+   [FILE] calculator.elf
+   [FILE] calculator.xtensa.elf
+   [FILE] log_viewer.elf
+   [FILE] log_viewer.xtensa.elf
+   [FILE] logs.txt
+   [FILE] log.txt
+   [FILE] mini_paint.elf
+   [FILE] mini_paint.xtensa.elf
+   [FILE] image_viewer.elf
+   [FILE] image_viewer.xtensa.elf
+   [FILE] LOGO_EA7JTP.bmp
+   [FILE] notepad.elf
+   [FILE] notepad.xtensa.elf
+   [FILE] test_meta_10e.html
+   [FILE] final_10e.html
+   [FILE] sysinfo.elf
+   [FILE] sysinfo.xtensa.elf
+   [FILE] sheet.elf
+   [FILE] sheet.xtensa.elf
+   [FILE] tactilebrowser.elf
+   [FILE] tactilebrowser.xtensa.elf
+   [FILE] test.html
+   [FILE] test_links.html
+   [FILE] test_10ad_page2.html
+   [FILE] test_10ad_index.html
+   [FILE] test_10ae_page2.html
+   [FILE] test_10ae_index.html
+   [FILE] test_10af_gui.html
+   [FILE] test_10ag_home.html
+   [FILE] test_10ak_visual.html
+[06A_MSC] 60 entradas en raiz
+[0;32mI (7505) display: Freed graphics framebuffer[0m
+[0;32mI (7505) display: Switched to text mode[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2ef0
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Jul  8 2026 19:37:46[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 001f4000[0m
+[0;32mI (76) boot:  3 storage          Unknown data     01 82 00204000 00d00000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c130020 size=a9c5ch (695388) map[0m
+[0;32mI (215) esp_image: segment 1: paddr=000b9c84 vaddr=3fc9c900 size=06394h ( 25492) load[0m
+[0;32mI (221) esp_image: segment 2: paddr=000c0020 vaddr=42000020 size=120154h (1179988) map[0m
+[0;32mI (429) esp_image: segment 3: paddr=001e017c vaddr=3fca2c94 size=00208h (   520) load[0m
+[0;32mI (430) esp_image: segment 4: paddr=001e038c vaddr=40374000 size=18820h (100384) load[0m
+[0;32mI (455) esp_image: segment 5: paddr=001f8bb4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (465) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (465) boot: Disabling RNG early entropy source...[0m
+[0;32mI (476) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (476) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (476) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (478) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (482) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (486) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (491) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (495) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (500) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (505) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (510) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (514) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (519) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (522) esp_psram: Speed: 80MHz[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (961) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (969) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (970) cpu_start: Pro cpu start user code[0m
+[0;32mI (970) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (971) app_init: Application information:[0m
+[0;32mI (975) app_init: Project name:     breezybox_example[0m
+[0;32mI (980) app_init: App version:      1[0m
+[0;32mI (983) app_init: Compile time:     Jul  8 2026 19:34:33[0m
+[0;32mI (988) app_init: ELF file SHA256:  8bbd38c73...[0m
+[0;32mI (993) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (996) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1000) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1004) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1008) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1015) heap_init: At 3FCB60D0 len 00033640 (205 KiB): RAM[0m
+[0;32mI (1020) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1025) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1030) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (1036) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1043) spi_flash: detected chip: generic[0m
+[0;32mI (1046) spi_flash: flash io: dio[0m
+[0;33mW (1049) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1059) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1066) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1072) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (1076) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1081) main_task: Started on CPU0[0m
+[0;32mI (1091) main_task: Calling app_main()[0m
+[0;32mI (1091) display: Initializing RGB LCD (Bounce Buffer Text Mode - Zero Copy)[0m
+[0;32mI (1091) display: Display ready: 800x480 pixels, 100x29 chars[0m
+[0;32mI (1101) display: Framebuffer in INTERNAL RAM at 0x3fcc013c (96000 bytes)[0m
+[0;32mI (1111) display: Switched to graphics mode 129 (400x240 scale=2 margin=0,0)[0m
+[0;32mI (1311) MINIPC_SD: Inicializando microSD 02B...[0m
+
+[02B] Inicializando SD...
+[0;32mI (1311) MINIPC_SD: CH422G OK, SD_CS en EXIO4[0m
+[0;32mI (1391) MINIPC_SD: Montando en /sdcard...[0m
+[0;32mI (1391) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1431) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (1491) MINIPC_SD: SD OK montada en /sdcard, size=14910 MB[0m
+[02B] SDCARD montada en /sdcard
+[02B] SDCARD size=14910 MB
+[02B] Test escritura SD OK: /sdcard/logs/minipc_02b_boot.txt
+[02D_USBSEL] ciclo USB_SEL HIGH, WR_IO=0xFF
+[02D_USBSEL] ciclo USB_SEL LOW + SD_CS LOW, WR_IO=0xCF
+[0;32mI (2221) MINIPC_USBSEL: USB_SEL cycle HIGH->LOW OK + SD_CS LOW, WR_IO=0xCF[0m
+
+[08A_TOUCH] Inicializando GT911 (0x14)...
+[0;32mI (3231) minipc_touch: Init GT911[0m
+[08A_TOUCH] GT911 detectado en 0x5D
+[08A_TOUCH] GT911 OK en 0x5D (status=0x80). Touch activo.
+[0;32mI (3451) minipc_touch: GT911 OK addr=0x5D status=0x80[0m
+[0;32mI (3671) usb_hid04a: Inicializando USB HID Keyboard+Mouse 05A Pointer...[0m
+
+[05A_USB] Inicializando USB HID Keyboard+Mouse + puntero...
+[0;32mI (3701) usb_hid04a: USB Host library OK[0m
+[0;32mI (3701) usb_hid04a: USB HID app task lista[0m
+[04A_USB] Conecte teclado/mouse USB o receptor 2.4GHz
+[04A_USB] Para HUB externo: CONFIG_USB_HOST_HUBS_SUPPORTED=y
+[0;32mI (3701) usb_hid04a: USB HID Keyboard+Mouse + puntero listo, esperando dispositivo[0m
+
+[MSC_HOTPLUG] Inicializando cliente USB MSC hot-plug...
+[0;32mI (3911) minipc_msc: Inicializando USB MSC host driver hot-plug[0m
+[MSC_HOTPLUG] Cliente MSC 01E_FIX1 listo. VFS persistente compile fix activo.
+[0;32mI (3911) minipc_msc: USB MSC hot-plug listo, esperando pendrive[0m
+[1;31mE (4011) HUB: Root port reset failed[0m
+
+[02E_WIFI] WiFi async task arrancando...
+
+[02E_WIFI] Inicializando WiFi app_main...
+[0;32mI (4221) MINIPC_WIFI: Inicializando WiFi app_main[0m
+[0;32mI (4221) pp: pp rom version: e7ae62f[0m
+[0;32mI (4221) net80211: net80211 rom version: e7ae62f[0m
+[02E_WIFI] WiFi programada async delay=0 ms
+[NTP_FAST] Servicio NTP vivo; esperando WiFi/IP...
+[0;32mI (4231) minipc_ntp: NTP_FAST worker arrancado[0m
+[0;32mI (4241) wifi:wifi driver task: 3fce6b18, prio:23, stack:6656, core=0[0m
+[0;32mI (4261) wifi:wifi firmware version: 0947e8b[0m
+[0;32mI (4261) wifi:wifi certification version: v7.0[0m
+[0;32mI (4261) wifi:config NVS flash: enabled[0m
+[0;32mI (4261) wifi:config nano formatting: disabled[0m
+[0;32mI (4261) wifi:Init data frame dynamic rx buffer num: 16[0m
+[0;32mI (4271) wifi:Init dynamic rx mgmt buffer num: 3[0m
+[0;32mI (4271) wifi:Init management short buffer num: 32[0m
+[0;32mI (4281) wifi:Init static tx buffer num: 5[0m
+[0;32mI (4281) wifi:Init tx cache buffer num: 16[0m
+[0;32mI (4281) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (4291) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (4291) wifi:Init static rx buffer num: 3[0m
+[0;32mI (4301) wifi:Init dynamic rx buffer num: 16[0m
+[0;32mI (4301) wifi_init: rx ba win: 3[0m
+[0;32mI (4301) wifi_init: accept mbox: 6[0m
+[0;32mI (4311) wifi_init: tcpip mbox: 32[0m
+[0;32mI (4311) wifi_init: udp mbox: 6[0m
+[0;32mI (4311) wifi_init: tcp mbox: 6[0m
+[0;32mI (4321) wifi_init: tcp tx win: 5760[0m
+[0;32mI (4321) wifi_init: tcp rx win: 5760[0m
+[0;32mI (4321) wifi_init: tcp mss: 1440[0m
+[0;32mI (4331) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (4331) MINIPC_WIFI: Conectando a SSID='MiFibra-4ED3'...[0m
+[02E_WIFI] WIFI conectando a MiFibra-4ED3...
+[0;32mI (4341) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (4411) wifi:mode : sta (90:70:69:1b:c7:34)[0m
+[0;32mI (4421) wifi:enable tsf[0m
+[0;32mI (4421) MINIPC_WIFI: STA_START -> connect[0m
+[0;32mI (4431) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4441) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4441) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4451) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (4481) HUB: Root port reset failed[0m
+[0;32mI (4911) wifi:<ba-add>idx:0 (ifx:0, f8:08:4f:de:8b:7a), tid:0, ssn:0, winSize:64[0m
+[0;32mI (4941) wifi:connected with MiFibra-4ED3, aid = 1, channel 11, BW20, bssid = f8:08:4f:de:8b:7a[0m
+[0;32mI (4941) wifi:security: WPA2-PSK, phy: bgn, rssi: -57, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (4961) wifi:pm start, type: 1[0m
+
+[0;32mI (4961) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4961) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (4991) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (5121) usb_hid04a: USB HID conectado proto=KEYBOARD subclass=1[0m
+
+[04A_USB] TECLADO USB HID conectado
+[0;32mI (5121) usb_hid04a: TECLADO USB HID listo[0m
+[0;32mI (5121) usb_hid04a: USB HID conectado proto=MOUSE subclass=1[0m
+
+[05A_USB] MOUSE USB HID conectado - puntero activo
+[0;32mI (5131) usb_hid04a: MOUSE USB HID listo x=200 y=120[0m
+
+[MSC_HOTPLUG] Pendrive CONECTADO (addr=3)
+[0;32mI (5501) minipc_msc: MSC_DEVICE_CONNECTED addr=3[0m
+[0;33mW (5501) hid-host: No HID device at USB port 3[0m
+[MSC_HOTPLUG] Gestionando connect addr=3 mounted=0 dev=0x0 vfs=0x0
+[1;31mE (5761) USB_MSC_SCSI: Sense error codes: Sense Key 0x06, ASC: 0x28, ASCQ: 0x00[0m
+[1;31mE (5761) USB_MSC_SCSI: Sense error description: UNIT ATTENTION: not ready to ready change, medium may have changed[0m
+[0;32mI (6021) esp_netif_handlers: sta ip: 192.168.1.56, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (6021) MINIPC_WIFI: WiFi conectada, IP=192.168.1.56[0m
+[02E_WIFI] WIFI conectada IP=192.168.1.56
+[0;32mI (6021) MINIPC_WIFI: WiFi OK IP=192.168.1.56[0m
+[02E_WIFI] WIFI OK IP=192.168.1.56
+[MSC_HOTPLUG] Capacidad: 14999 MB, sector=512, sectores=30719999
+[0;32mI (6041) MSC VFS: ARIELO 01E persistent VFS registered /usb drive=1:[0m
+[0;32mI (6231) minipc_ntp: SNTP iniciado/reiniciado intento=1 motivo=wifi_ready TZ=Europe/Madrid[0m
+[NTP_FAST] intento=1 motivo=wifi_ready WiFi IP=192.168.1.56
+[MSC_HOTPLUG] Pendrive MONTADO en /usb (intento 1, gen=1)
+[06A_MSC] Contenido de /usb:
+   [FILE] paint.bmp
+   [DIR ] identif_tuner
+   [DIR ] WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN
+   [FILE] minipc_02b_boot.txt
+   [FILE] nota.txt
+   [DIR ] logs
+   [FILE] PRUEBA.TXT
+   [FILE] browser_favs.txt
+   [FILE] prueba1.csv
+   [FILE] sheet.csv
+   [FILE] prueba2.csv
+   [FILE] recuperado.txt
+   [FILE] minipc_02b_boot.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt
+   [FILE] celeste.xtensa
+   [DIR ] profe
+   [FILE] profe.tar.gz
+   [FILE] snake.xtensa.elf
+   [FILE] snake.elf
+   [FILE] pruebapaintmini.bmp
+   [FILE] tdt_analiz_RELEASE_1_20F_final.tar.gz
+   [DIR ] tdt_analiz_RELEASE_1_20F_final
+   [FILE] pong.elf
+   [FILE] pong.xtensa.elf
+   [FILE] tetris.elf
+   [FILE] tetris.xtensa.elf
+   [FILE] breakout.elf
+   [FILE] breakout.xtensa.elf
+   [DIR ] System Volume Information
+   [FILE] calculator.elf
+   [FILE] calculator.xtensa.elf
+   [FILE] log_viewer.elf
+   [FILE] log_viewer.xtensa.elf
+   [FILE] logs.txt
+   [FILE] log.txt
+   [FILE] mini_paint.elf
+   [FILE] mini_paint.xtensa.elf
+   [FILE] image_viewer.elf
+   [FILE] image_viewer.xtensa.elf
+   [FILE] LOGO_EA7JTP.bmp
+   [FILE] notepad.elf
+   [FILE] notepad.xtensa.elf
+   [FILE] test_meta_10e.html
+   [FILE] final_10e.html
+   [FILE] sysinfo.elf
+   [FILE] sysinfo.xtensa.elf
+   [FILE] sheet.elf
+   [FILE] sheet.xtensa.elf
+   [FILE] tactilebrowser.elf
+   [FILE] tactilebrowser.xtensa.elf
+   [FILE] test.html
+   [FILE] test_links.html
+   [FILE] test_10ad_page2.html
+   [FILE] test_10ad_index.html
+   [FILE] test_10ae_page2.html
+   [FILE] test_10ae_index.html
+   [FILE] test_10af_gui.html
+   [FILE] test_10ag_home.html
+   [FILE] test_10ak_visual.html
+[06A_MSC] 60 entradas en raiz
+[0;32mI (8021) display: Freed graphics framebuffer[0m
+[0;32mI (8021) display: Switched to text mode[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x8 (TG1WDT_SYS_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4200587a
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2ef0
+entry 0x403c8924
+[0;32mI (29) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jul  8 2026 19:37:46[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v0.2[0m
+[0;32mI (32) boot: efuse block revision: v1.3[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;33mW (47) boot.esp32s3: PRO CPU has been reset by WDT.[0m
+[0;33mW (52) boot.esp32s3: APP CPU has been reset by WDT.[0m
+[0;32mI (56) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (83) boot:  2 factory          factory app      00 00 00010000 001f4000[0m
+[0;32mI (89) boot:  3 storage          Unknown data     01 82 00204000 00d00000[0m
+[0;32mI (96) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=00010020 vaddr=3c130020 size=a9c5ch (695388) map[0m
+[0;32mI (229) esp_image: segment 1: paddr=000b9c84 vaddr=3fc9c900 size=06394h ( 25492) load[0m
+[0;32mI (234) esp_image: segment 2: paddr=000c0020 vaddr=42000020 size=120154h (1179988) map[0m
+[0;32mI (443) esp_image: segment 3: paddr=001e017c vaddr=3fca2c94 size=00208h (   520) load[0m
+[0;32mI (443) esp_image: segment 4: paddr=001e038c vaddr=40374000 size=18820h (100384) load[0m
+[0;32mI (468) esp_image: segment 5: paddr=001f8bb4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (479) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (479) boot: Disabling RNG early entropy source...[0m
+[0;32mI (489) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (489) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (489) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (491) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (496) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (500) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (504) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (509) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (514) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (518) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (524) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (528) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (533) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (536) esp_psram: Speed: 80MHz[0m
+[0;32mI (539) cpu_start: Multicore app[0m
+[0;32mI (974) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (983) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (983) cpu_start: Pro cpu start user code[0m
+[0;32mI (983) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (985) app_init: Application information:[0m
+[0;32mI (989) app_init: Project name:     breezybox_example[0m
+[0;32mI (993) app_init: App version:      1[0m
+[0;32mI (997) app_init: Compile time:     Jul  8 2026 19:34:33[0m
+[0;32mI (1002) app_init: ELF file SHA256:  8bbd38c73...[0m
+[0;32mI (1006) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (1010) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1014) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1018) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1022) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1029) heap_init: At 3FCB60D0 len 00033640 (205 KiB): RAM[0m
+[0;32mI (1034) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1039) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1044) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (1050) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1057) spi_flash: detected chip: generic[0m
+[0;32mI (1060) spi_flash: flash io: dio[0m
+[0;33mW (1063) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1073) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1079) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1086) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (1090) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1095) main_task: Started on CPU0[0m
+[0;32mI (1105) main_task: Calling app_main()[0m
+[0;32mI (1105) display: Initializing RGB LCD (Bounce Buffer Text Mode - Zero Copy)[0m
+[0;32mI (1105) display: Display ready: 800x480 pixels, 100x29 chars[0m
+[0;32mI (1115) display: Framebuffer in INTERNAL RAM at 0x3fcc013c (96000 bytes)[0m
+[0;32mI (1125) display: Switched to graphics mode 129 (400x240 scale=2 margin=0,0)[0m
+[0;32mI (1325) MINIPC_SD: Inicializando microSD 02B...[0m
+
+[02B] Inicializando SD...
+[0;32mI (1325) MINIPC_SD: CH422G OK, SD_CS en EXIO4[0m
+[0;32mI (1405) MINIPC_SD: Montando en /sdcard...[0m
+[0;32mI (1405) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1445) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (1505) MINIPC_SD: SD OK montada en /sdcard, size=14910 MB[0m
+[02B] SDCARD montada en /sdcard
+[02B] SDCARD size=14910 MB
+[02B] Test escritura SD OK: /sdcard/logs/minipc_02b_boot.txt
+[02D_USBSEL] ciclo USB_SEL HIGH, WR_IO=0xFF
+[02D_USBSEL] ciclo USB_SEL LOW + SD_CS LOW, WR_IO=0xCF
+[0;32mI (2235) MINIPC_USBSEL: USB_SEL cycle HIGH->LOW OK + SD_CS LOW, WR_IO=0xCF[0m
+
+[08A_TOUCH] Inicializando GT911 (0x14)...
+[0;32mI (3245) minipc_touch: Init GT911[0m
+[08A_TOUCH] GT911 detectado en 0x5D
+[08A_TOUCH] GT911 OK en 0x5D (status=0x80). Touch activo.
+[0;32mI (3465) minipc_touch: GT911 OK addr=0x5D status=0x80[0m
+[0;32mI (3685) usb_hid04a: Inicializando USB HID Keyboard+Mouse 05A Pointer...[0m
+
+[05A_USB] Inicializando USB HID Keyboard+Mouse + puntero...
+[0;32mI (3715) usb_hid04a: USB Host library OK[0m
+[0;32mI (3715) usb_hid04a: USB HID app task lista[0m
+[04A_USB] Conecte teclado/mouse USB o receptor 2.4GHz
+[04A_USB] Para HUB externo: CONFIG_USB_HOST_HUBS_SUPPORTED=y
+[0;32mI (3715) usb_hid04a: USB HID Keyboard+Mouse + puntero listo, esperando dispositivo[0m
+
+[MSC_HOTPLUG] Inicializando cliente USB MSC hot-plug...
+[0;32mI (3925) minipc_msc: Inicializando USB MSC host driver hot-plug[0m
+[MSC_HOTPLUG] Cliente MSC 01E_FIX1 listo. VFS persistente compile fix activo.
+[0;32mI (3925) minipc_msc: USB MSC hot-plug listo, esperando pendrive[0m
+
+[02E_WIFI] WiFi async task arrancando...
+
+[02E_WIFI] Inicializando WiFi app_main...
+[0;32mI (4235) MINIPC_WIFI: Inicializando WiFi app_main[0m
+[0;32mI (4235) pp: pp rom version: e7ae62f[0m
+[0;32mI (4235) net80211: net80211 rom version: e7ae62f[0m
+[02E_WIFI] WiFi programada async delay=0 ms
+[NTP_FAST] Servicio NTP vivo; esperando WiFi/IP...
+[0;32mI (4245) minipc_ntp: Hora valida detectada[0m
+[0;32mI (4255) wifi:wifi driver task: 3fce75c0, prio:23, stack:6656, core=0[0m
+[0;32mI (4275) wifi:wifi firmware version: 0947e8b[0m
+[0;32mI (4275) wifi:wifi certification version: v7.0[0m
+[0;32mI (4275) wifi:config NVS flash: enabled[0m
+[0;32mI (4275) wifi:config nano formatting: disabled[0m
+[0;32mI (4275) wifi:Init data frame dynamic rx buffer num: 16[0m
+[0;32mI (4285) wifi:Init dynamic rx mgmt buffer num: 3[0m
+[0;32mI (4285) wifi:Init management short buffer num: 32[0m
+[0;32mI (4295) wifi:Init static tx buffer num: 5[0m
+[0;32mI (4295) wifi:Init tx cache buffer num: 16[0m
+[0;32mI (4295) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (4305) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (4305) wifi:Init static rx buffer num: 3[0m
+[0;32mI (4315) wifi:Init dynamic rx buffer num: 16[0m
+[0;32mI (4315) wifi_init: rx ba win: 3[0m
+[0;32mI (4315) wifi_init: accept mbox: 6[0m
+[0;32mI (4325) wifi_init: tcpip mbox: 32[0m
+[0;32mI (4325) wifi_init: udp mbox: 6[0m
+[0;32mI (4325) wifi_init: tcp mbox: 6[0m
+[0;32mI (4335) wifi_init: tcp tx win: 5760[0m
+[0;32mI (4335) wifi_init: tcp rx win: 5760[0m
+[0;32mI (4335) wifi_init: tcp mss: 1440[0m
+[0;32mI (4335) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (4345) MINIPC_WIFI: Conectando a SSID='MiFibra-4ED3'...[0m
+[02E_WIFI] WIFI conectando a MiFibra-4ED3...
+[0;32mI (4355) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (4425) wifi:mode : sta (90:70:69:1b:c7:34)[0m
+[0;32mI (4425) wifi:enable tsf[0m
+[NTP_FAST] Hora valida detectada
+[0;32mI (4435) MINIPC_WIFI: STA_START -> connect[0m
+[0;32mI (4435) minipc_ntp: NTP_FAST worker arrancado[0m
+[0;32mI (4485) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4495) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4495) usb_hid04a: USB HID conectado proto=KEYBOARD subclass=1[0m
+[0;32mI (4505) wifi:state: auth -> assoc (0x0)[0m
+
+[04A_USB] TECLADO USB HID conectado
+[0;32mI (4505) usb_hid04a: TECLADO USB HID listo[0m
+[0;32mI (4505) usb_hid04a: USB HID conectado proto=MOUSE subclass=1[0m
+[0;32mI (4515) wifi:state: assoc -> run (0x10)[0m
+
+[05A_USB] MOUSE USB HID conectado - puntero activo
+[0;32mI (4525) usb_hid04a: MOUSE USB HID listo x=200 y=120[0m
+[0;32mI (4545) wifi:<ba-add>idx:0 (ifx:0, f8:08:4f:de:8b:7a), tid:0, ssn:0, winSize:64[0m
+[0;32mI (4565) wifi:connected with MiFibra-4ED3, aid = 1, channel 11, BW20, bssid = f8:08:4f:de:8b:7a[0m
+[0;32mI (4565) wifi:security: WPA2-PSK, phy: bgn, rssi: -53, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (4575) wifi:pm start, type: 1[0m
+
+[0;32mI (4575) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4585) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (4635) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+
+[MSC_HOTPLUG] Pendrive CONECTADO (addr=3)
+[0;32mI (4885) minipc_msc: MSC_DEVICE_CONNECTED addr=3[0m
+[0;33mW (4885) hid-host: No HID device at USB port 3[0m
+[MSC_HOTPLUG] Gestionando connect addr=3 mounted=0 dev=0x0 vfs=0x0
+[1;31mE (5145) USB_MSC_SCSI: Sense error codes: Sense Key 0x06, ASC: 0x28, ASCQ: 0x00[0m
+[1;31mE (5145) USB_MSC_SCSI: Sense error description: UNIT ATTENTION: not ready to ready change, medium may have changed[0m
+[MSC_HOTPLUG] Capacidad: 14999 MB, sector=512, sectores=30719999
+[0;32mI (5405) MSC VFS: ARIELO 01E persistent VFS registered /usb drive=1:[0m
+[MSC_HOTPLUG] Pendrive MONTADO en /usb (intento 1, gen=1)
+[06A_MSC] Contenido de /usb:
+   [FILE] paint.bmp
+   [DIR ] identif_tuner
+   [DIR ] WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN
+   [FILE] minipc_02b_boot.txt
+   [FILE] nota.txt
+   [DIR ] logs
+   [FILE] PRUEBA.TXT
+   [FILE] browser_favs.txt
+   [FILE] prueba1.csv
+   [FILE] sheet.csv
+   [FILE] prueba2.csv
+   [FILE] recuperado.txt
+   [FILE] minipc_02b_boot.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt.gz
+   [FILE] README_RELEASE_1_20F11g_NALDETECT.txt
+   [FILE] celeste.xtensa
+   [DIR ] profe
+   [FILE] profe.tar.gz
+   [FILE] snake.xtensa.elf
+   [FILE] snake.elf
+   [FILE] pruebapaintmini.bmp
+   [FILE] tdt_analiz_RELEASE_1_20F_final.tar.gz
+   [DIR ] tdt_analiz_RELEASE_1_20F_final
+   [FILE] pong.elf
+   [FILE] pong.xtensa.elf
+   [FILE] tetris.elf
+   [FILE] tetris.xtensa.elf
+   [FILE] breakout.elf
+   [FILE] breakout.xtensa.elf
+   [DIR ] System Volume Information
+   [FILE] calculator.elf
+   [FILE] calculator.xtensa.elf
+   [FILE] log_viewer.elf
+   [FILE] log_viewer.xtensa.elf
+   [FILE] logs.txt
+   [FILE] log.txt
+   [FILE] mini_paint.elf
+   [FILE] mini_paint.xtensa.elf
+   [FILE] image_viewer.elf
+   [FILE] image_viewer.xtensa.elf
+   [FILE] LOGO_EA7JTP.bmp
+   [FILE] notepad.elf
+   [FILE] notepad.xtensa.elf
+   [FILE] test_meta_10e.html
+   [FILE] final_10e.html
+   [FILE] sysinfo.elf
+   [FILE] sysinfo.xtensa.elf
+   [FILE] sheet.elf
+   [FILE] sheet.xtensa.elf
+   [FILE] tactilebrowser.elf
+   [FILE] tactilebrowser.xtensa.elf
+   [FILE] test.html
+   [FILE] test_links.html
+   [FILE] test_10ad_page2.html
+   [FILE] test_10ad_index.html
+   [FILE] test_10ae_page2.html
+   [FILE] test_10ae_index.html
+   [FILE] test_10af_gui.html
+   [FILE] test_10ag_home.html
+   [FILE] test_10ak_visual.html
+[06A_MSC] 60 entradas en raiz
+[0;32mI (5625) esp_netif_handlers: sta ip: 192.168.1.56, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5625) MINIPC_WIFI: WiFi conectada, IP=192.168.1.56[0m
+[02E_WIFI] WIFI conectada IP=192.168.1.56
+[0;32mI (5625) MINIPC_WIFI: WiFi OK IP=192.168.1.56[0m
+[02E_WIFI] WIFI OK IP=192.168.1.56
+[0;32mI (7515) display: Freed graphics framebuffer[0m
+[0;32mI (7515) display: Switched to text mode[0m

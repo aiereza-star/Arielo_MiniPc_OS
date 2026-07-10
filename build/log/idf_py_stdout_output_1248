@@ -1,0 +1,119 @@
+Command: ninja flash
+[1/11] Copying all_my_symbols.c -> esp_all_symbol.c
+[2/11] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/ESP32_IDF_LAB/WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5160 bytes. 0x2ea0 bytes (36%) free.
+[3/11] No install step for 'bootloader'
+[4/11] Completed 'bootloader'
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/cmd_tbbrowser_gui_10ah.c.obj
+[6/11] Linking C static library esp-idf\main\libmain.a
+[7/11] Generating esp-idf/esp_system/ld/sections.ld
+[8/11] Linking CXX executable breezybox_example.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.12.dev2
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated D:/ESP32_IDF_LAB/WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN/build/breezybox_example.bin
+[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP32_IDF_LAB/WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN/build/partition_table/partition-table.bin D:/ESP32_IDF_LAB/WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN/build/breezybox_example.bin"
+breezybox_example.bin binary size 0x1ea210 bytes. Smallest app partition is 0x1f4000 bytes. 0x9df0 bytes (2%) free.
+Warning: The smallest app partition is nearly full (2% free space left)!
+[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.5.4\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.5.4 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.5_py3.13_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.5.4/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP32_IDF_LAB/WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN/build -P C:/Espressif/frameworks/esp-idf-v5.5.4/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM5 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x10000 breezybox_example.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.dev2
+Serial port COM5
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 90:70:69:1b:c7:34
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x001fafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 20832 bytes to 13349...
+Writing at 0x00000000... (100 %)
+Wrote 20832 bytes (13349 compressed) at 0x00000000 in 0.4 seconds (effective 374.0 kbit/s)...
+Hash of data verified.
+Compressed 2007568 bytes to 1081032...
+Writing at 0x00010000... (1 %)
+Writing at 0x0001b4b6... (3 %)
+Writing at 0x000285c8... (4 %)
+Writing at 0x00034bcf... (6 %)
+Writing at 0x00040a6d... (7 %)
+Writing at 0x0004c0c2... (9 %)
+Writing at 0x0005240d... (10 %)
+Writing at 0x0006636d... (12 %)
+Writing at 0x0007d128... (13 %)
+Writing at 0x0009522e... (15 %)
+Writing at 0x0009e4a2... (16 %)
+Writing at 0x000a32c2... (18 %)
+Writing at 0x000a860b... (19 %)
+Writing at 0x000afd2b... (21 %)
+Writing at 0x000b90e9... (22 %)
+Writing at 0x000c3b0d... (24 %)
+Writing at 0x000c9e42... (25 %)
+Writing at 0x000d02d4... (27 %)
+Writing at 0x000d5dd5... (28 %)
+Writing at 0x000dba0c... (30 %)
+Writing at 0x000e2b63... (31 %)
+Writing at 0x000e8f56... (33 %)
+Writing at 0x000eec16... (34 %)
+Writing at 0x000f44c0... (36 %)
+Writing at 0x000fa570... (37 %)
+Writing at 0x001006c0... (39 %)
+Writing at 0x00106978... (40 %)
+Writing at 0x0010c3bd... (42 %)
+Writing at 0x001125b9... (43 %)
+Writing at 0x00118f2a... (45 %)
+Writing at 0x001217ec... (46 %)
+Writing at 0x00129113... (48 %)
+Writing at 0x0012f2c4... (50 %)
+Writing at 0x00134f25... (51 %)
+Writing at 0x0013aa82... (53 %)
+Writing at 0x001408b1... (54 %)
+Writing at 0x0014647f... (56 %)
+Writing at 0x0014c501... (57 %)
+Writing at 0x0015294b... (59 %)
+Writing at 0x00158ba5... (60 %)
+Writing at 0x0015e818... (62 %)
+Writing at 0x001645a3... (63 %)
+Writing at 0x0016a75a... (65 %)
+Writing at 0x00170659... (66 %)
+Writing at 0x00175cf7... (68 %)
+Writing at 0x0017ae61... (69 %)
+Writing at 0x00180476... (71 %)
+Writing at 0x00185c76... (72 %)
+Writing at 0x0018b1c3... (74 %)
+Writing at 0x00190557... (75 %)
+Writing at 0x00195ba5... (77 %)
+Writing at 0x0019bad1... (78 %)
+Writing at 0x001a12d2... (80 %)
+Writing at 0x001a7022... (81 %)
+Writing at 0x001ad393... (83 %)
+Writing at 0x001b2d5a... (84 %)
+Writing at 0x001b8474... (86 %)
+Writing at 0x001be735... (87 %)
+Writing at 0x001c8a6c... (89 %)
+Writing at 0x001cf2ff... (90 %)
+Writing at 0x001d6467... (92 %)
+Writing at 0x001db510... (93 %)
+Writing at 0x001e11d3... (95 %)
+Writing at 0x001e7441... (96 %)
+Writing at 0x001ed4d5... (98 %)
+Writing at 0x001f38ca... (100 %)
+Wrote 2007568 bytes (1081032 compressed) at 0x00010000 in 24.4 seconds (effective 657.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 122...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (122 compressed) at 0x00008000 in 0.0 seconds (effective 918.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

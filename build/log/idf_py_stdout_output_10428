@@ -1,0 +1,131 @@
+Command: C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.4\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN\build\breezybox_example.elf D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.4\tools\idf.py' '-p' 'COM5'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2ef0
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Jul  8 2026 19:37:46[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 001f4000[0m
+[0;32mI (76) boot:  3 storage          Unknown data     01 82 00204000 00d00000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3c130020 size=aabdch (699356) map[0m
+[0;32mI (216) esp_image: segment 1: paddr=000bac04 vaddr=3fc9c900 size=05414h ( 21524) load[0m
+[0;32mI (221) esp_image: segment 2: paddr=000c0020 vaddr=42000020 size=123dc4h (1195460) map[0m
+[0;32mI (432) esp_image: segment 3: paddr=001e3dec vaddr=3fca1d14 size=01198h (  4504) load[0m
+[0;32mI (433) esp_image: segment 4: paddr=001e4f8c vaddr=40374000 size=18820h (100384) load[0m
+[0;32mI (457) esp_image: segment 5: paddr=001fd7b4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (468) boot: Disabling RNG early entropy source...[0m
+[0;32mI (478) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (478) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (478) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (481) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (485) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (489) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (493) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (498) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (503) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (508) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (513) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (517) MSPI Timing: Enter psram timing tuning[0m
+[0;32mI (522) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (525) esp_psram: Speed: 80MHz[0m
+[0;32mI (528) cpu_start: Multicore app[0m
+[0;32mI (963) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (972) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (972) cpu_start: Pro cpu start user code[0m
+[0;32mI (972) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (974) app_init: Application information:[0m
+[0;32mI (978) app_init: Project name:     breezybox_example[0m
+[0;32mI (983) app_init: App version:      1[0m
+[0;32mI (986) app_init: Compile time:     Jul  8 2026 19:34:33[0m
+[0;32mI (991) app_init: ELF file SHA256:  8bb34fa54...[0m
+[0;32mI (995) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (999) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1003) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (1007) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (1011) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1017) heap_init: At 3FCB7D68 len 000319A8 (198 KiB): RAM[0m
+[0;32mI (1023) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (1028) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (1033) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (1039) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (1046) spi_flash: detected chip: generic[0m
+[0;32mI (1049) spi_flash: flash io: dio[0m
+[0;33mW (1052) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1062) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1068) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1075) coexist: coex firmware version: 093e3d2[0m
+[0;32mI (1079) coexist: coexist rom version e7ae62f[0m
+[0;32mI (1084) main_task: Started on CPU0[0m
+[0;32mI (1094) main_task: Calling app_main()[0m
+[0;32mI (1094) display: Initializing RGB LCD (Bounce Buffer Text Mode - Zero Copy)[0m
+[0;32mI (1094) display: Display ready: 800x480 pixels, 100x29 chars[0m
+[0;32mI (1104) display: Framebuffer in INTERNAL RAM at 0x3fcc1dd4 (96000 bytes)[0m
+[0;32mI (1114) display: Switched to graphics mode 129 (400x240 scale=2 margin=0,0)[0m
+[0;32mI (1314) MINIPC_SD: Inicializando microSD 02B...[0m
+
+[02B] Inicializando SD...
+[0;32mI (1314) MINIPC_SD: CH422G OK, SD_CS en EXIO4[0m
+[0;32mI (1394) MINIPC_SD: Montando en /sdcard...[0m
+[0;32mI (1394) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1434) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (1494) MINIPC_SD: SD OK montada en /sdcard, size=14910 MB[0m
+[02B] SDCARD montada en /sdcard
+[02B] SDCARD size=14910 MB
+[02B] Test escritura SD OK: /sdcard/logs/minipc_02b_boot.txt
+[02D_USBSEL] ciclo USB_SEL HIGH, WR_IO=0xFF
+[02D_USBSEL] ciclo USB_SEL LOW + SD_CS LOW, WR_IO=0xCF
+[0;32mI (2224) MINIPC_USBSEL: USB_SEL cycle HIGH->LOW OK + SD_CS LOW, WR_IO=0xCF[0m
+
+[08A_TOUCH] Inicializando GT911 (0x14)...
+[0;32mI (3234) minipc_touch: Init GT911[0m
+[08A_TOUCH] GT911 detectado en 0x14
+[08A_TOUCH] GT911 OK en 0x14 (status=0x80). Touch activo.
+[0;32mI (3454) minipc_touch: GT911 OK addr=0x14 status=0x80[0m
+[0;32mI (3674) usb_hid04a: Inicializando USB HID Keyboard+Mouse 05A Pointer...[0m
+
+[05A_USB] Inicializando USB HID Keyboard+Mouse + puntero...
+[0;32mI (3704) usb_hid04a: USB Host library OK[0m
+[0;32mI (3704) usb_hid04a: USB HID app task lista[0m
+[04A_USB] Conecte teclado/mouse USB o receptor 2.4GHz
+[04A_USB] Para HUB externo: CONFIG_USB_HOST_HUBS_SUPPORTED=y
+[0;32mI (3704) usb_hid04a: USB HID Keyboard+Mouse + puntero listo, esperando dispositivo[0m
+
+[MSC_HOTPLUG] Inicializando cliente USB MSC hot-plug...
+[0;32mI (3914) minipc_msc: Inicializando USB MSC host driver hot-plug[0m
+[MSC_HOTPLUG] Cliente MSC 01E_FIX1 listo. VFS persistente compile fix activo.
+[0;32mI (3914) minipc_msc: USB MSC hot-plug listo, esperando pendrive[0m
+[1;31mE (4014) HUB: Root port reset failed[0m
+
+[02E_WIFI] WiFi async task arrancando...
+
+[02E_WIFI] Inicializando WiFi app_main...
+[0;32mI (4224) MINIPC_WIFI: Inicializando WiFi app_main[0m
+[0;32mI (4224) pp: pp rom version: e7ae62f[0m
+[0;32mI (4224) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (4234) wifi:wifi driver task: 3fce87b8, prio:23, stack:6656, core=0[0m
+[0;32mI (4244) wifi:wifi firmware version: 0947e8b[0m
+[0;32mI (4244) wifi:wifi certification version: v7.0[0m
+[0;32mI (4244) wifi:config NVS flash: enabled[0m
+[0;32mI (4254) wifi:config nano formatting: disabled[0m
+[0;32mI (4254) wifi:Init data frame dynamic rx buffer num: 16[0m
+[0;32mI (4254) wifi:Init dynamic rx mgmt buffer num: 3[0m
+[0;32mI (4264) wifi:Init management short buffer num: 32[0m
+[0;32mI (
