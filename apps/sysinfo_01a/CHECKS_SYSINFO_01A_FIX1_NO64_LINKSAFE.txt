@@ -1,0 +1,11 @@
+version_fix1: OK
+no_esp_timer_get_time_identifier: OK
+no_int64_type: OK
+no_uint64_type: OK
+approx_uptime: OK
+draw_bar_no64: OK
+mlongcalls_bat: OK
+calc_chassis_mode: OK
+uses_heap: OK
+save_log: OK
+local_include: OK

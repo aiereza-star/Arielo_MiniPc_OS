@@ -1,0 +1,14 @@
+syntax_ok_host_gcc: OK
+version_01j: OK
+no_duplicate_splice: OK
+cursor_space_6px: OK
+text_width_space_6px: OK
+new_clears_filename: OK
+save_prompts_name: OK
+pending_save_after_path: OK
+sin_nombre_display: OK
+root_sd_usb_slash: OK
+buffer_16k_kept: OK
+file_picker_kept: OK
+lowercase_kept: OK
+no_01i_version_marker: OK

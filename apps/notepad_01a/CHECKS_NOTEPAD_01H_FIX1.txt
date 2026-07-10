@@ -1,0 +1,11 @@
+syntax_ok_host_gcc: OK
+real_source_01h_fix1: OK
+no_01g_version_left: OK
+no_duplicate_file_open: OK
+uses_dirent: OK
+file_picker_mode: OK
+compatible_filters: OK
+open_lists_not_blind: OK
+calc_chassis_kept: OK
+file_open_save_kept: OK
+no_stale_01g_check_file: OK

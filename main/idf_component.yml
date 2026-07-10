@@ -1,0 +1,11 @@
+dependencies:
+  idf:
+    version: '>=5.5.0'
+  valdanylchuk/breezybox:
+    version: '>=1.0.3'
+  valdanylchuk/breezy_bt:
+    version: '>=1.0.1'
+  valdanylchuk/breezy_rgb_lcd:
+    version: '>=1.0.0'
+  espressif/usb_host_hid: ^1.2.0
+  espressif/usb_host_msc: "^1.2.0"

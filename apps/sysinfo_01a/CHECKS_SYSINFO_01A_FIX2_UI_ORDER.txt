@@ -1,0 +1,12 @@
+version_fix2: OK
+visible_sys_01a2: OK
+mem_panel_taller: OK
+mount_panel_taller: OK
+mount_columns: OK
+button_positions: OK
+bar_shorter: OK
+no_64bit: OK
+calc_chassis_mode: OK
+save_log: OK
+mlongcalls_bat: OK
+local_include: OK

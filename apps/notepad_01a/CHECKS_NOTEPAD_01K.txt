@@ -1,0 +1,14 @@
+syntax_ok_host_gcc: OK
+version_01k: OK
+capslock_define: OK
+capslock_global: OK
+capslock_toggle: OK
+caps_indicator: OK
+shift_inverts_caps: OK
+real_lowercase_glyphs: OK
+no_artificial_lowercase: OK
+cursor_fix_kept: OK
+untitled_save_kept: OK
+buffer_16k_kept: OK
+file_picker_kept: OK
+no_01j_marker: OK

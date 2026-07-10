@@ -1,0 +1,45 @@
+ARIELO MINIPC OS - PARCHE MINIMO PARA APPS EXTERNAS CON RATON/TOUCH
+
+Error visto:
+  ELF: Can't find symbol usb_hid_mouse_get_state
+  ELF relocate failed: -88
+
+Causa:
+  usb_hid_mouse_get_state() existe en el SO base, pero no esta exportada en:
+    components/espressif__elf_loader/src/esp_all_symbol.c
+
+ARCHIVO A EDITAR:
+  components/espressif__elf_loader/src/esp_all_symbol.c
+
+1) En la zona de extern int, añadir:
+
+extern int usb_hid_mouse_get_state;
+extern int usb_hid_mouse_set_position;
+extern int minipc_touch_ok;
+extern int minipc_touch_read;
+
+2) En la tabla de ESP_ELFSYM_EXPORT, junto a los simbolos de apps Arielo, añadir:
+
+    ESP_ELFSYM_EXPORT(usb_hid_mouse_get_state),
+    ESP_ELFSYM_EXPORT(usb_hid_mouse_set_position),
+    ESP_ELFSYM_EXPORT(minipc_touch_ok),
+    ESP_ELFSYM_EXPORT(minipc_touch_read),
+
+Zona recomendada, despues de:
+
+    ESP_ELFSYM_EXPORT(rgb_gfx_pixel),
+    ESP_ELFSYM_EXPORT(rgb_gfx_rectfill),
+    ESP_ELFSYM_EXPORT(bt_keyboard_is_pressed),
+    ESP_ELFSYM_EXPORT(bt_keyboard_get_modifiers),
+    ESP_ELFSYM_EXPORT(bt_keyboard_connected),
+
+3) Compilar y flashear el SO base:
+
+    idf.py build flash monitor
+
+4) Volver a lanzar calculator.xtensa.elf.
+
+NOTA:
+  Esto no mete la calculadora dentro del firmware. Solo abre al ELF loader cuatro simbolos
+  publicos que ya usa el desktop integrado. El SO base sigue siendo ligero; es una pequeña
+  correccion de ABI/API para apps externas.

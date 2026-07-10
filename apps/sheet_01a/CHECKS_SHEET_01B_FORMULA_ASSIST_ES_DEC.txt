@@ -1,0 +1,15 @@
+version_marker: OK
+mode_form: OK
+keyboard_es_default: OK
+f9_toggle: OK
+f4_decimals: OK
+formula_builder: OK
+form_buttons: OK
+typed_equal_starts_form: OK
+fixed_scaled: OK
+no_64bit: OK
+no_float_double: OK
+calc_chassis_mode: OK
+save_csv: OK
+mlongcalls: OK
+local_include: OK

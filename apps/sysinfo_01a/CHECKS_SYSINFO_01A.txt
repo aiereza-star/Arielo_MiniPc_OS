@@ -1,0 +1,16 @@
+version_marker: OK
+calc_chassis_mode: OK
+no_direct_framebuffer: OK
+uses_rectfill: OK
+uses_vsync: OK
+uses_keyboard_poll: OK
+uses_mouse_state: OK
+uses_touch: OK
+heap_free: OK
+heap_big: OK
+uptime: OK
+mounts: OK
+save_log: OK
+exit_text: OK
+build_bat: OK
+local_include: OK

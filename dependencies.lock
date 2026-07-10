@@ -1,0 +1,183 @@
+dependencies:
+  espressif/cmake_utilities:
+    component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.5.3
+  espressif/elf_loader:
+    dependencies: []
+    source:
+      path: D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN\components\espressif__elf_loader
+      type: local
+    version: 1.3.1
+  espressif/usb_host_hid:
+    component_hash: a6c5366f9b6d80b0d5f56d085d62941464512e0968b96c5877e76a80fcc23f13
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    - name: espressif/usb
+      registry_url: https://components.espressif.com
+      require: public
+      rules:
+      - if: idf_version >=6.0
+      - if: target not in ["linux"]
+      version: ^1.0.0
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32s2
+    - esp32s3
+    - esp32p4
+    - esp32h4
+    - esp32s31
+    - linux
+    version: 1.2.0
+  espressif/usb_host_msc:
+    component_hash: a7330d2bc4f81c21fd335df073405085bbad5cdf084a1be79fb52383d0d0d6fd
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    - name: espressif/usb
+      registry_url: https://components.espressif.com
+      require: public
+      rules:
+      - if: idf_version >=6.0
+      - if: target not in ["linux"]
+      version: ^1.0.0
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32s2
+    - esp32s3
+    - esp32p4
+    - esp32h4
+    - esp32s31
+    - linux
+    version: 1.2.0
+  espressif/zlib:
+    component_hash: 64ea2fd6754c5a05951f1ddb312ac835cd782e68cb5bd9dfcd1c3a107c8fbfbc
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.3.2
+  idf:
+    source:
+      type: idf
+    version: 5.5.4
+  joltwallet/littlefs:
+    component_hash: 01faa388c6305fe77fd6962cda6171e753033458f24f8fae9e9d932e3d817a4c
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.22.1
+  valdanylchuk/breezy_bt:
+    component_hash: 590245e385fa156d571e20c7a3c1f6d48fe115191dd740b4e4b205c95a2016a5
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32
+    - esp32c2
+    - esp32c3
+    - esp32c5
+    - esp32c6
+    - esp32c61
+    - esp32h2
+    - esp32h21
+    - esp32h4
+    - esp32s3
+    version: 1.0.2
+  valdanylchuk/breezy_rgb_lcd:
+    dependencies: []
+    source:
+      path: D:\ESP32_IDF_LAB\WAVESHARE_7_MINIPC_BREEZYBOX_LAB_02C_WIFI_APPMAIN\components\valdanylchuk__breezy_rgb_lcd
+      type: local
+    version: 1.0.0
+  valdanylchuk/breezy_term:
+    component_hash: d8a944d9ea380f6a019fca7c43ca3f02e80523768730b53b8439da965db22641
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    targets:
+    - esp32
+    - esp32c2
+    - esp32c3
+    - esp32c5
+    - esp32c6
+    - esp32c61
+    - esp32h2
+    - esp32h21
+    - esp32h4
+    - esp32p4
+    - esp32s2
+    - esp32s3
+    version: 1.0.3
+  valdanylchuk/breezybox:
+    component_hash: b37b640cd1a245fa2072fa08d31e708db9174812508aa4562145e78454549a2b
+    dependencies:
+    - name: espressif/elf_loader
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.3
+    - name: espressif/zlib
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.3
+    - name: idf
+      require: private
+      version: '>=5.0'
+    - name: joltwallet/littlefs
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.20
+    - name: valdanylchuk/breezy_term
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^1.0.1
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32
+    - esp32c6
+    - esp32c61
+    - esp32p4
+    - esp32s2
+    - esp32s3
+    version: 1.0.3
+direct_dependencies:
+- espressif/cmake_utilities
+- espressif/usb_host_hid
+- espressif/usb_host_msc
+- idf
+- valdanylchuk/breezy_bt
+- valdanylchuk/breezy_rgb_lcd
+- valdanylchuk/breezybox
+manifest_hash: 65fa44e942c9554ee5e9ef32bc9f26b92652dc8ae3422cffff4b66192fd7a22c
+target: esp32s3
+version: 2.0.0
